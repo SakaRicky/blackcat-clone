@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Layout } from "./components/Layout";
+import HomeCalendar from "./components/HomeCalendar";
+import { Menu } from "./components/Menu";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [state, setState] = useState("home");
+	return (
+		<div className="bg-[#111111] text-gray-500 p-2">
+			<Layout>
+				<Menu setState={setState} />
+				<HomeCalendar state={state} />
+			</Layout>
+		</div>
+	);
 }
 
 export default App;
