@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.polygon-clip {
+		-webkit-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 0% 50%);
+		clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 0% 50%);
+	}
+
+	.slash-clip {
+		-webkit-clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%, 0% 50%);
+		clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%, 0% 50%);
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
 	background-color: #0a0a0a;
 	width: 19px;
@@ -12,13 +30,25 @@
 	background-color: #bd4f54;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+.white-scrollbar::-webkit-scrollbar {
+	width: 12px;
 }
 
-h1,
-h2 {
-	text-shadow: -1px 0 black, 0 0px black, 5px 0 black, 0 5px black;
+/* Track */
+.white-scrollbar::-webkit-scrollbar-track {
+	background: #0a0a0a;
+}
+
+/* Handle */
+.white-scrollbar::-webkit-scrollbar-thumb {
+	border: none;
+	background: #fff;
+}
+
+.date-day {
+	clip-path: polygon(19% 0%, 100% 0, 100% 100%, 0 100%, 0% 50%);
+}
+
+.shadow {
+	box-shadow: 0px -1em 1em red, 0px 8px 5px rgb(30, 30, 30);
 }

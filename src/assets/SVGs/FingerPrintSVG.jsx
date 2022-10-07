@@ -1,6 +1,6 @@
 import React from "react";
 
-export const FingerPrintSVG = ({ handleClick }) => {
+export const FingerPrintSVG = ({ handleClick, classes }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +8,7 @@ export const FingerPrintSVG = ({ handleClick }) => {
 			viewBox="0 0 24 24"
 			strokeWidth={1.5}
 			stroke="currentColor"
-			className="w-10 h-10 cursor-pointer"
+			className={classes}
 			onClick={handleClick}
 		>
 			<path

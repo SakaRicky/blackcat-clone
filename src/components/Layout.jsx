@@ -1,9 +1,9 @@
 import React from "react";
-import heroBackground from "../static/images/heroBackground.jpeg";
-import { Twitter } from "../static/SVGs/TwitterSVG";
-import { Youtube } from "../static/SVGs/YoutubeSVG";
-import { Discord } from "../static/SVGs/DiscordSVG";
-import { Facebook } from "../static/SVGs/FacebookSVG";
+import heroBackground from "../assets/images/heroBackground.jpeg";
+import { Twitter } from "../assets/SVGs/TwitterSVG";
+import { Youtube } from "../assets/SVGs/YoutubeSVG";
+import { Discord } from "../assets/SVGs/DiscordSVG";
+import { Facebook } from "../assets/SVGs/FacebookSVG";
 
 export const Layout = ({ children }) => {
 	return (

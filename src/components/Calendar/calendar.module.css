@@ -1,0 +1,31 @@
+.banner_slant {
+	height: 200px;
+	width: 150px;
+	background: linear-gradient(to bottom, red, transparent);
+	transform: skew(-20deg);
+	position: absolute;
+	top: 0;
+	margin: 0px 0px 0px 50px;
+	box-shadow: -35px 0px rgba(0, 0, 0, 0.5);
+	mix-blend-mode: overlay;
+}
+.banner_back {
+	position: absolute;
+	background-size: 25%;
+	color: black;
+	font: 800 100px Poppins;
+	line-height: 60px;
+	margin: -10px;
+	letter-spacing: -14px;
+	mix-blend-mode: overlay;
+	opacity: 0.15;
+}
+.banner_name {
+	font: 800 40px Poppins;
+	line-height: 35px;
+	letter-spacing: -4.25px;
+	z-index: 1;
+	text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+	white-space: nowrap;
+	word-spacing: 5px;
+}
