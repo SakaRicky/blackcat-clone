@@ -6,7 +6,7 @@ import { Characters } from "./components/Characters/Characters";
 
 function App() {
 	const [mainPage, setMainPage] = useState("home");
-	const [subPage, setSubPage] = useState("calendar");
+	const [subPage, setSubPage] = useState("home");
 
 	return (
 		<div className="bg-[#111111] text-gray-500 p-2">
