@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import char_background from "../../assets/images/char_background.png";
 
-export const Character = ({ character }) => {
+export const Character = ({ character, showSelectedCharacter }) => {
 	const [hoveredImage, setHoveredImage] = useState(false);
 
 	return (
@@ -8,23 +9,36 @@ export const Character = ({ character }) => {
 			className="relative overflow-hidden flex justify-center w-[150px] cursor-pointer"
 			onMouseEnter={() => setHoveredImage(true)}
 			onMouseLeave={() => setHoveredImage(false)}
+			onClick={() => showSelectedCharacter(character)}
 		>
-			<div className="relative h-[350px] w-[95%] border boder-green-600 overflow-hidden">
+			<div className="relative h-[350px] w-[95%] overflow-hidden">
 				<div
 					style={{
-						backgroundImage: `url(${character.image})`,
+						backgroundImage: `url(${char_background})`,
 						width: "100%",
 						height: "950px",
 						backgroundPosition: "top",
 						backgroundSize: "cover",
 						backgroundRepeat: "no-repeat",
-						filter: hoveredImage ? "grayscale(0%)" : "grayscale(100%)",
-						transform: hoveredImage
-							? "scale(1.02) translate(5px, -5px)"
-							: "scale(1)  translate(0, 0)",
-						transition: "all 300ms ease-in",
 					}}
-				></div>
+				>
+					<div
+						style={{
+							backgroundImage: `url(${character.image})`,
+							width: "100%",
+							height: "950px",
+							backgroundPosition: "top",
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+							filter: hoveredImage ? "grayscale(0%)" : "grayscale(100%)",
+							transform: hoveredImage
+								? "scale(1.02) translate(5px, -5px)"
+								: "scale(1)  translate(0, 0)",
+							transition: "all 300ms ease-in",
+						}}
+					></div>
+				</div>
+
 				<div className="h-[15%] z-10 bg-[#151515] w-full absolute bottom-0 left-0"></div>
 			</div>
 			<div className="w-[200px] z-10 h-[20%] absolute bottom-4 -left-6 bg-[#151515] rotate-12 shadow"></div>

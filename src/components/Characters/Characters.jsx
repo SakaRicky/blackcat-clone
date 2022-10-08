@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FingerPrintSVG } from "../../assets/SVGs/FingerPrintSVG";
 import { Character } from "./Character";
 import Kikuya from "../../assets/images/kikuya.png";
@@ -7,8 +7,22 @@ import Azelea from "../../assets/images/Azelea.png";
 import Sachiko from "../../assets/images/Sachiko.png";
 import Ameonna from "../../assets/images/Ameonna.png";
 import Naomi from "../../assets/images/Naomi.png";
+import { Modal } from "../Modal";
 
 export const Characters = () => {
+	const [selectedCharacher, setSelectedCharacher] = useState(undefined);
+	const [showModal, setShowModal] = useState(false);
+
+	const showSelectedCharacter = character => {
+		setSelectedCharacher(character);
+		setShowModal(true);
+	};
+
+	const closeModal = () => {
+		setSelectedCharacher(undefined);
+		setShowModal(false);
+	};
+
 	const characters = [
 		{ name: "Kikuya", category: "Dealer", image: Kikuya },
 		{ name: "Jasmine", category: "Dealer", image: Jasmine },
@@ -19,6 +33,11 @@ export const Characters = () => {
 	];
 	return (
 		<div className="relative">
+			{showModal && (
+				<Modal closeModal={closeModal}>
+					<Character character={selectedCharacher} />
+				</Modal>
+			)}
 			<div className="absolute -top-6">
 				<div className="absolute -top-8 -left-12">
 					<FingerPrintSVG classes="h-20 w-20 text-red-500" />
@@ -32,7 +51,8 @@ export const Characters = () => {
 				{characters.map(c => (
 					<Character
 						key={c.image}
-						character={{ name: c.name, category: c.category, image: c.image }}
+						character={c}
+						showSelectedCharacter={showSelectedCharacter}
 					/>
 				))}
 			</div>
