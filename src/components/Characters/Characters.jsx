@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import { FingerPrintSVG } from "../../assets/SVGs/FingerPrintSVG";
 import { Character } from "./Character";
 import Kikuya from "../../assets/images/kikuya.png";
+import Kikuya_standing from "../../assets/images/Kikuya Standing 1.png";
 import Jasmine from "../../assets/images/Jasmine.png";
+import Jasmine_standing from "../../assets/images/Jasmine Standing 1.png";
 import Azelea from "../../assets/images/Azelea.png";
+import Azelea_standing from "../../assets/images/Azalea Standing 1.png";
 import Sachiko from "../../assets/images/Sachiko.png";
+import Sachiko_standing from "../../assets/images/Sachiko Standing 1.png";
 import Ameonna from "../../assets/images/Ameonna.png";
+import Ameonna_standing from "../../assets/images/Ameonna Standing 1.png";
 import Naomi from "../../assets/images/Naomi.png";
+import Naomi_standing from "../../assets/images/Naomi Standing 1.png";
 import { Modal } from "../Modal";
 
 export const Characters = () => {
@@ -24,18 +30,52 @@ export const Characters = () => {
 	};
 
 	const characters = [
-		{ name: "Kikuya", category: "Dealer", image: Kikuya },
-		{ name: "Jasmine", category: "Dealer", image: Jasmine },
-		{ name: "Azelea", category: "Player", image: Azelea },
-		{ name: "Sachiko", category: "Player", image: Sachiko },
-		{ name: "Ameona", category: "Player", image: Ameonna },
-		{ name: "Naomi", category: "Player", image: Naomi },
+		{
+			name: "Kikuya",
+			category: "Dealer",
+			image: Kikuya,
+			standingImage: Kikuya_standing,
+		},
+		{
+			name: "Jasmine",
+			category: "Dealer",
+			image: Jasmine,
+			standingImage: Jasmine_standing,
+		},
+		{
+			name: "Azelea",
+			category: "Player",
+			image: Azelea,
+			standingImage: Azelea_standing,
+		},
+		{
+			name: "Sachiko",
+			category: "Player",
+			image: Sachiko,
+			standingImage: Sachiko_standing,
+		},
+		{
+			name: "Ameona",
+			category: "Player",
+			image: Ameonna,
+			standingImage: Ameonna_standing,
+		},
+		{
+			name: "Naomi",
+			category: "Player",
+			image: Naomi,
+			standingImage: Naomi_standing,
+		},
 	];
 	return (
 		<div className="relative">
 			{showModal && (
 				<Modal closeModal={closeModal}>
-					<Character character={selectedCharacher} />
+					<img
+						src={selectedCharacher.standingImage}
+						alt={selectedCharacher.name}
+						// className=""
+					/>
 				</Modal>
 			)}
 			<div className="absolute -top-6">
