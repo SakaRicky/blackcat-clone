@@ -10,7 +10,7 @@ function App() {
 
 	return (
 		<div className="bg-[#111111] text-gray-500 p-2">
-			<Layout>
+			<Layout subPage={subPage}>
 				<Menu setState={setMainPage} setSubPage={setSubPage} />
 
 				{mainPage === "home" ? (

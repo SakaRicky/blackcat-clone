@@ -15,6 +15,11 @@ export const Menu = ({ setState, setSubPage }) => {
 		setSubPage("calendar");
 	};
 
+	const handleFilmClick = () => {
+		setState("home");
+		setSubPage("film");
+	};
+
 	return (
 		<div className="flex gap-8 justify-end items-center text-white z-10 relative">
 			<HomeSVG handleClick={handleHomeClick} />
@@ -23,7 +28,7 @@ export const Menu = ({ setState, setSubPage }) => {
 				handleClick={() => setState("characters")}
 				classes="w-10 h-10 cursor-pointer"
 			/>
-			<FilmSVG handleClick={() => setState("film")} />
+			<FilmSVG handleClick={handleFilmClick} />
 		</div>
 	);
 };

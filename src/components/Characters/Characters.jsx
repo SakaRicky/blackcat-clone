@@ -14,6 +14,7 @@ import Ameonna_standing from "../../assets/images/Ameonna Standing 1.png";
 import Naomi from "../../assets/images/Naomi.png";
 import Naomi_standing from "../../assets/images/Naomi Standing 1.png";
 import { Modal } from "../Modal";
+import { motion } from "framer-motion";
 
 export const Characters = () => {
 	const [selectedCharacher, setSelectedCharacher] = useState(undefined);
@@ -68,7 +69,7 @@ export const Characters = () => {
 		},
 	];
 	return (
-		<div className="relative">
+		<div className="relative my-12">
 			{showModal && (
 				<Modal closeModal={closeModal}>
 					<img
@@ -88,12 +89,22 @@ export const Characters = () => {
 				<div className="absolute -top-4 left-0 h-12 w-[600px] opacity-20 bg-gradient-to-r from-red-600 to-transparent"></div>
 			</div>
 			<div className="grid grid-cols-6 gap-2 pt-20">
-				{characters.map(c => (
-					<Character
-						key={c.image}
-						character={c}
-						showSelectedCharacter={showSelectedCharacter}
-					/>
+				{characters.map((c, i) => (
+					<motion.div
+						initial={{ y: -100, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{
+							type: "tween",
+							delay: parseFloat(`0.${i}`),
+							duration: 1.1,
+						}}
+					>
+						<Character
+							key={c.image}
+							character={c}
+							showSelectedCharacter={showSelectedCharacter}
+						/>
+					</motion.div>
 				))}
 			</div>
 		</div>

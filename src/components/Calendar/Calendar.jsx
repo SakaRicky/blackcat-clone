@@ -1,10 +1,16 @@
 import React from "react";
 import styles from "./calendar.module.css";
+import { motion } from "framer-motion";
 
 export const Calendar = () => {
 	return (
 		<div className="flex gap-8 -ml-4 w-[110%]">
-			<div className="w-[50%]">
+			<motion.div
+				className="w-[50%]"
+				initial={{ x: -50, opacity: 0 }}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ type: "tween", delay: 0.5, duration: 0.7 }}
+			>
 				<div className="date tag flex justify-between">
 					{/* <div class="efail-banner-updates-0">
 						<span></span>
@@ -52,8 +58,13 @@ export const Calendar = () => {
 						anticipated for Winter of 2022..
 					</p>
 				</div>
-			</div>
-			<div className="border-2 border-black w-[50%] overflow-hidden p-2 relative">
+			</motion.div>
+			<motion.div
+				className="border-2 border-black w-[50%] overflow-hidden p-2 relative"
+				initial={{ x: 50, opacity: 0 }}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ type: "tween", delay: 0.5, duration: 0.7 }}
+			>
 				<div className={styles.banner_slant}></div>
 				<div className={styles.banner_back}>
 					GAME
@@ -67,7 +78,7 @@ export const Calendar = () => {
 						GAME NEWS<div>& UPDATES</div>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

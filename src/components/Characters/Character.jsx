@@ -6,7 +6,7 @@ export const Character = ({ character, showSelectedCharacter }) => {
 
 	return (
 		<div
-			className="relative overflow-hidden flex justify-center w-[150px] cursor-pointer"
+			className="relative overflow-hidden flex justify-center cursor-pointer"
 			onMouseEnter={() => setHoveredImage(true)}
 			onMouseLeave={() => setHoveredImage(false)}
 			onClick={() => showSelectedCharacter(character)}
