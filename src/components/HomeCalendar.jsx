@@ -35,7 +35,7 @@ const HomeCalendar = ({ state, subPage }) => {
 				</div>
 
 				<div className="mt-8 text-400">
-					<AnimatePresence exitBeforeEnter>
+					<AnimatePresence exitBeforeEnter initial={false}>
 						{subPage === "home" ? (
 							<motion.div
 								key="home"
