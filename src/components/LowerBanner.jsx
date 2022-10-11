@@ -4,7 +4,7 @@ import welcomeCoin from "../assets/images/welcome_coin.png";
 
 export const LowerBanner = () => {
 	return (
-		<div className="relative z-20 border border-[#151515]">
+		<div className="relative z-10 border border-[#151515]">
 			<div className="h-1/2 flex items-center gap-2 bg-[#151515] p-8">
 				<img src={welcomeCharacter} className="h-24 w-24 rounded-full" alt="" />
 				<div className="flex">
