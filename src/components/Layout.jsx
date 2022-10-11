@@ -11,13 +11,14 @@ import { LowerBanner } from "./LowerBanner";
 
 export const Layout = ({ children, subPage }) => {
 	return (
-		<div className="">
+		<div className="pt-2">
 			<div
-				className="relative w-[94%] ml-auto min-h-screen pb-8 "
+				className="relative w-[94%] ml-auto pb-8"
 				style={{
 					background: `url(${heroBackground})`,
 					backgroundAttachment: "fixed",
 					backgroundSize: "cover",
+					minHeight: "calc(100vh - 0.5rem)",
 				}}
 			>
 				<nav className="sticky top-2 left-0 right-0 bg-[#0a0a0a] h-[65px] flex items-center z-20">

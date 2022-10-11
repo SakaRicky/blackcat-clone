@@ -21,7 +21,6 @@ export const Calendar = () => {
 					</div>
 					<div className="flex">
 						<div className="bg-gray-300 text-black w-40 flex justify-end items-center polygon-clip">
-							{/* <span></span> */}
 							<div className="leading-[16px] text-right text-[0.75rem]">
 								LATEST
 								<br />

@@ -9,7 +9,7 @@ function App() {
 	const [subPage, setSubPage] = useState("home");
 
 	return (
-		<div className="bg-[#111111] text-gray-500 p-2">
+		<div className="bg-[#111111] text-gray-500 px-2">
 			<Layout subPage={subPage}>
 				<Menu setState={setMainPage} setSubPage={setSubPage} />
 
