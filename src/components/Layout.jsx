@@ -13,13 +13,13 @@ export const Layout = ({ children, subPage }) => {
 	return (
 		<div className="">
 			<div
-				className="ml-[85px] min-h-screen pb-8"
+				className="relative w-[94%] ml-auto min-h-screen pb-8 "
 				style={{
 					background: `url(${heroBackground})`,
 					backgroundAttachment: "fixed",
 				}}
 			>
-				<nav className="fixed bg-[#0a0a0a] w-full h-[65px] flex items-center z-20">
+				<nav className="sticky top-2 left-0 right-0 bg-[#0a0a0a] h-[65px] flex items-center z-20">
 					<a
 						href="https://catmaid.cafe/"
 						target="_blank"
@@ -37,7 +37,7 @@ export const Layout = ({ children, subPage }) => {
 					</a>
 				</nav>
 
-				<main className=" relative px-12 overflow-hidden-auto">
+				<main className=" relative px-12 overflow-hidden">
 					<motion.div
 						style={{
 							backgroundImage: `url(${dots})`,
@@ -56,7 +56,7 @@ export const Layout = ({ children, subPage }) => {
 					</div>
 				</main>
 			</div>
-			<aside className="fixed top-2 left-2 bottom-2 w-[75px] pb-4 bg-[#0a0a0a] flex flex-col gap-4 justify-end items-center">
+			<aside className="fixed top-2 left-2 bottom-2 w-[5%] pb-4 bg-[#0a0a0a] flex flex-col gap-4 justify-end items-center">
 				<Discord color={"#616161"} />
 				<Youtube color={"#616161"} />
 				<Facebook color={"#616161"} />

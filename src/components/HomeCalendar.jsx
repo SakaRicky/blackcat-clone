@@ -12,7 +12,7 @@ const HomeCalendar = ({ state, subPage }) => {
 				animate={{ x: subPage === "home" ? 0 : -50, opacity: 1 }}
 				transition={{ type: "tween", duration: 0.7 }}
 			>
-				<img src={hero} alt="" className="pl-12 w-[full]" />
+				<img src={hero} alt="" className="pl-12" />
 			</motion.div>
 			{/* <motion.div
 				style={{
