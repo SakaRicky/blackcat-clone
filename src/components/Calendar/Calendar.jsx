@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./calendar.module.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const Calendar = () => {
 	return (
