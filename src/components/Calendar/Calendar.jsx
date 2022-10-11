@@ -1,21 +1,17 @@
 import React from "react";
 import styles from "./calendar.module.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const Calendar = () => {
 	return (
-		<div className="flex gap-8 -ml-4 w-[110%]">
+		<div className="flex gap-8 -ml-4 w-[110%]" key="calendar">
 			<motion.div
 				className="w-[50%]"
 				initial={{ x: -50, opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
-				transition={{ type: "tween", delay: 0.5, duration: 0.7 }}
+				transition={{ type: "tween", duration: 0.7 }}
 			>
 				<div className="date tag flex justify-between">
-					{/* <div class="efail-banner-updates-0">
-						<span></span>
-						<div></div>
-					</div> */}
 					<div className="inline-block text-red-500 leading-8 text-[3rem] -ml-12 font-black overflow-visible">
 						9
 						<span className="inline-block h-[40px] w-[3px] ml-1 -mb-2 bg-gray-300 rotate-[30deg]"></span>
@@ -63,7 +59,7 @@ export const Calendar = () => {
 				className="border-2 border-black w-[50%] overflow-hidden p-2 relative"
 				initial={{ x: 50, opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
-				transition={{ type: "tween", delay: 0.5, duration: 0.7 }}
+				transition={{ type: "tween", duration: 0.7 }}
 			>
 				<div className={styles.banner_slant}></div>
 				<div className={styles.banner_back}>

@@ -14,19 +14,7 @@ const HomeCalendar = ({ state, subPage }) => {
 			>
 				<img src={hero} alt="" className="pl-12" />
 			</motion.div>
-			{/* <motion.div
-				style={{
-					backgroundImage: `url(${hero})`,
-					width: "1500px",
-					// height: "750px",
-					backgroundPosition: "top",
-					backgroundSize: "cover",
-					backgroundRepeat: "no-repeat",
-				}}
-				className="-ml-20"
-				animate={{ x: subPage === "home" ? 0 : -50 }}
-				transition={{ type: "tween", duration: 0.7 }}
-			></motion.div> */}
+
 			<div className="text-gray-400 mt-12 w-[40%]">
 				<div className="font-black italic -ml-16">
 					<div
@@ -47,7 +35,7 @@ const HomeCalendar = ({ state, subPage }) => {
 				</div>
 
 				<div className="mt-8 text-400">
-					<AnimatePresence>
+					<AnimatePresence exitBeforeEnter>
 						{subPage === "home" ? (
 							<motion.div
 								key="home"
@@ -78,9 +66,7 @@ const HomeCalendar = ({ state, subPage }) => {
 								</p>
 							</motion.div>
 						) : subPage === "calendar" ? (
-							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-								<Calendar />
-							</motion.div>
+							<Calendar />
 						) : null}
 					</AnimatePresence>
 				</div>

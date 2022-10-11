@@ -17,6 +17,7 @@ export const Layout = ({ children, subPage }) => {
 				style={{
 					background: `url(${heroBackground})`,
 					backgroundAttachment: "fixed",
+					backgroundSize: "cover",
 				}}
 			>
 				<nav className="sticky top-2 left-0 right-0 bg-[#0a0a0a] h-[65px] flex items-center z-20">
