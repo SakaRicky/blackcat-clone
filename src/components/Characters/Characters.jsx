@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import { FingerPrintSVG } from "../../assets/SVGs/FingerPrintSVG";
 import { Character } from "./Character";
-import Kikuya from "../../assets/images/kikuya.png";
-import Kikuya_standing from "../../assets/images/Kikuya Standing 1.png";
-import Jasmine from "../../assets/images/Jasmine.png";
-import Jasmine_standing from "../../assets/images/Jasmine Standing 1.png";
-import Azelea from "../../assets/images/Azelea.png";
-import Azelea_standing from "../../assets/images/Azalea Standing 1.png";
-import Sachiko from "../../assets/images/Sachiko.png";
-import Sachiko_standing from "../../assets/images/Sachiko Standing 1.png";
-import Ameonna from "../../assets/images/Ameonna.png";
-import Ameonna_standing from "../../assets/images/Ameonna Standing 1.png";
-import Naomi from "../../assets/images/Naomi.png";
-import Naomi_standing from "../../assets/images/Naomi Standing 1.png";
+import Kikuya from "../../assets/images/kikuya/kikuya.png";
+// import Kikuya_fbx from "../../assets/allBCfbxFiles/kikuya/";
+import Jasmine from "../../assets/images/jasmine/Jasmine.png";
+import Jasmine_fbx from "../../assets/images/basemesh/BC_basemesh_stencil.fbx";
+import Azelea from "../../assets/images/azaela/Azelea.png";
+import Azelea_fbx from "../../assets/images/azaela/azaela.fbx";
+import Sachiko from "../../assets/images/sachiko/Sachiko.png";
+import Sachiko_fbx from "../../assets/images/sachiko/Sachiko_Prop.fbx";
+import Ameonna from "../../assets/images/amenome/Ameonna.png";
+import Ameonna_fbx from "../../assets/images/amenome/Ameonna.fbx";
+import Naomi from "../../assets/images/naomi/Naomi.png";
+import Naomi_fbx from "../../assets/images/naomi/naomi.fbx";
 import { Modal } from "../Modal";
 import { motion } from "framer-motion";
+import { CharacterViewer3D } from "../CharacterViewer3D";
 
 export const Characters = () => {
 	const [selectedCharacher, setSelectedCharacher] = useState(undefined);
@@ -26,6 +27,7 @@ export const Characters = () => {
 	};
 
 	const closeModal = () => {
+		console.log("Modal clicked");
 		setSelectedCharacher(undefined);
 		setShowModal(false);
 	};
@@ -35,48 +37,51 @@ export const Characters = () => {
 			name: "Kikuya",
 			category: "Dealer",
 			image: Kikuya,
-			standingImage: Kikuya_standing,
+			fbx: "",
+			// fbx: Kikuya_fbx
 		},
 		{
 			name: "Jasmine",
 			category: "Dealer",
 			image: Jasmine,
-			standingImage: Jasmine_standing,
+			fbx: Jasmine_fbx,
 		},
 		{
 			name: "Azelea",
 			category: "Player",
 			image: Azelea,
-			standingImage: Azelea_standing,
+			fbx: Azelea_fbx,
 		},
 		{
 			name: "Sachiko",
 			category: "Player",
 			image: Sachiko,
-			standingImage: Sachiko_standing,
+			fbx: Sachiko_fbx,
 		},
 		{
 			name: "Ameona",
 			category: "Player",
 			image: Ameonna,
-			standingImage: Ameonna_standing,
+			fbx: Ameonna_fbx,
 		},
 		{
 			name: "Naomi",
 			category: "Player",
 			image: Naomi,
-			standingImage: Naomi_standing,
+			fbx: Naomi_fbx,
 		},
 	];
+
 	return (
 		<div className="relative my-12">
 			{showModal && (
 				<Modal closeModal={closeModal}>
-					<img
+					{/* <img
 						src={selectedCharacher.standingImage}
 						alt={selectedCharacher.name}
 						// className=""
-					/>
+					/> */}
+					<CharacterViewer3D srcFBX={selectedCharacher.fbx} />
 				</Modal>
 			)}
 			<div className="absolute -top-6">
@@ -91,6 +96,7 @@ export const Characters = () => {
 			<div className="grid grid-cols-6 gap-2 pt-20">
 				{characters.map((c, i) => (
 					<motion.div
+						key={c.image}
 						initial={{ y: -100, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{
@@ -100,7 +106,6 @@ export const Characters = () => {
 						}}
 					>
 						<Character
-							key={c.image}
 							character={c}
 							showSelectedCharacter={showSelectedCharacter}
 						/>
