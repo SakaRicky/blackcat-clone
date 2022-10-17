@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FingerPrintSVG } from "../../assets/SVGs/FingerPrintSVG";
 import { Character } from "./Character";
 import Kikuya from "../../assets/images/kikuya/kikuya.png";
-// import Kikuya_fbx from "../../assets/allBCfbxFiles/kikuya/";
+import Kikuya_fbx from "../../assets/images/azaela/azaela.fbx";
 import Jasmine from "../../assets/images/jasmine/Jasmine.png";
 import Jasmine_fbx from "../../assets/images/basemesh/BC_basemesh_stencil.fbx";
 import Azelea from "../../assets/images/azaela/Azelea.png";
@@ -37,8 +37,7 @@ export const Characters = () => {
 			name: "Kikuya",
 			category: "Dealer",
 			image: Kikuya,
-			fbx: "",
-			// fbx: Kikuya_fbx
+			fbx: Kikuya_fbx,
 		},
 		{
 			name: "Jasmine",
