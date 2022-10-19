@@ -41,7 +41,7 @@ export const Character = ({ character, showSelectedCharacter }) => {
 
 				<div className="h-[15%] z-10 bg-[#151515] w-full absolute bottom-0 left-0"></div>
 			</div>
-			<div className="w-[200px] z-10 h-[20%] absolute bottom-4 -left-6 bg-[#151515] rotate-12 shadow"></div>
+			<div className="w-[200px] z-10 h-[20%] absolute bottom-4 -left-2 bg-[#151515] rotate-12 shadow"></div>
 			<div className="absolute z-10 left-2 bottom-6 w-16 h-16 text-3xl text-gray-800 border-[3px] border-gray-800 rounded-full p-4 font-black flex items-center justify-center">
 				{character.category[0]}
 			</div>

@@ -52,7 +52,7 @@ export const Layout = ({ children, subPage }) => {
 						transition={{ type: "tween", duration: 0.7 }}
 					></motion.div>
 
-					<div className="max-w-6xl m-auto mt-4 pt-[80px] relative">
+					<div className="max-w-6xl m-auto mt-4 pt-[20px] relative">
 						{children}
 						<LowerBanner />
 					</div>

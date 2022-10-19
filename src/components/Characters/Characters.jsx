@@ -38,36 +38,48 @@ export const Characters = () => {
 			category: "Dealer",
 			image: Kikuya,
 			fbx: Kikuya_fbx,
+			description:
+				"Black Cat is an upcoming game that puts two players against one another in a competitive game of Black Jack - there is no house, no playing against the dealer, <span class='text-red-600'>WINNER TAKES ALL</span>.\n <span class='text-red-600'>PLAY</span> in a fantasy world and select characters that give will give you an edge for the jackpot. A succubus that can look into your opponents hearts to tell you there cards or a medium who can make ghost cards. <span class='text-red-500'>THE CHOICE IS YOURS</span>.\n Climb the ladder against opponents across the world, turning a game of luck into a game of skill. The <span class='text-red-500'>CASINO</span> awaits.",
 		},
 		{
 			name: "Jasmine",
 			category: "Dealer",
 			image: Jasmine,
 			fbx: Jasmine_fbx,
+			description:
+				"Black Cat is an upcoming game that puts two players against one another in a competitive game of Black Jack - there is no house, no playing against the dealer, <span class='text-red-500'>WINNER TAKES ALL</span>.\n <span class='text-red-500'>PLAY</span> in a fantasy world and select characters that give will give you an edge for the jackpot. A succubus that can look into your opponents hearts to tell you there cards or a medium who can make ghost cards. <span class='text-red-500'>THE CHOICE IS YOURS</span>.\n Climb the ladder against opponents across the world, turning a game of luck into a game of skill. The <span class='text-red-500'>CASINO</span> awaits.",
 		},
 		{
 			name: "Azelea",
 			category: "Player",
 			image: Azelea,
 			fbx: Azelea_fbx,
+			description:
+				"Black Cat is an upcoming game that puts two players against one another in a competitive game of Black Jack - there is no house, no playing against the dealer, <span class='text-red-500'>WINNER TAKES ALL</span>.\n <span class='text-red-500'>PLAY</span> in a fantasy world and select characters that give will give you an edge for the jackpot. A succubus that can look into your opponents hearts to tell you there cards or a medium who can make ghost cards. <span class='text-red-500'>THE CHOICE IS YOURS</span>.\n Climb the ladder against opponents across the world, turning a game of luck into a game of skill. The <span class='text-red-500'>CASINO</span> awaits.",
 		},
 		{
 			name: "Sachiko",
 			category: "Player",
 			image: Sachiko,
 			fbx: Sachiko_fbx,
+			description:
+				"Black Cat is an upcoming game that puts two players against one another in a competitive game of Black Jack - there is no house, no playing against the dealer, <span class='text-red-500'>WINNER TAKES ALL</span>.\n <span class='text-red-500'>PLAY</span> in a fantasy world and select characters that give will give you an edge for the jackpot. A succubus that can look into your opponents hearts to tell you there cards or a medium who can make ghost cards. <span class='text-red-500'>THE CHOICE IS YOURS</span>.\n Climb the ladder against opponents across the world, turning a game of luck into a game of skill. The <span class='text-red-500'>CASINO</span> awaits.",
 		},
 		{
 			name: "Ameona",
 			category: "Player",
 			image: Ameonna,
 			fbx: Ameonna_fbx,
+			description:
+				"Black Cat is an upcoming game that puts two players against one another in a competitive game of Black Jack - there is no house, no playing against the dealer, <span class='text-red-500'>WINNER TAKES ALL</span>.\n <span class='text-red-500'>PLAY</span> in a fantasy world and select characters that give will give you an edge for the jackpot. A succubus that can look into your opponents hearts to tell you there cards or a medium who can make ghost cards. <span class='text-red-500'>THE CHOICE IS YOURS</span>.\n Climb the ladder against opponents across the world, turning a game of luck into a game of skill. The <span class='text-red-500'>CASINO</span> awaits.",
 		},
 		{
 			name: "Naomi",
 			category: "Player",
 			image: Naomi,
 			fbx: Naomi_fbx,
+			description:
+				"Black Cat is an upcoming game that puts two players against one another in a competitive game of Black Jack - there is no house, no playing against the dealer, <span class='text-red-500'>WINNER TAKES ALL</span>.\n <span class='text-red-500'>PLAY</span> in a fantasy world and select characters that give will give you an edge for the jackpot. A succubus that can look into your opponents hearts to tell you there cards or a medium who can make ghost cards. <span class='text-red-500'>THE CHOICE IS YOURS</span>.\n Climb the ladder against opponents across the world, turning a game of luck into a game of skill. The <span class='text-red-500'>CASINO</span> awaits.",
 		},
 	];
 
@@ -75,12 +87,7 @@ export const Characters = () => {
 		<div className="relative my-12">
 			{showModal && (
 				<Modal closeModal={closeModal}>
-					{/* <img
-						src={selectedCharacher.standingImage}
-						alt={selectedCharacher.name}
-						// className=""
-					/> */}
-					<CharacterViewer3D srcFBX={selectedCharacher.fbx} />
+					<CharacterViewer3D selectedCharacher={selectedCharacher} />
 				</Modal>
 			)}
 			<div className="absolute -top-6">
