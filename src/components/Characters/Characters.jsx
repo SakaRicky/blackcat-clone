@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FingerPrintSVG } from "../../assets/SVGs/FingerPrintSVG";
-import { Character } from "./Character";
+import { Character } from "./Character/Character";
 import Kikuya from "../../assets/images/kikuya/kikuya.png";
 import Kikuya_fbx from "../../assets/images/azaela/azaela.fbx";
 import Jasmine from "../../assets/images/jasmine/Jasmine.png";
