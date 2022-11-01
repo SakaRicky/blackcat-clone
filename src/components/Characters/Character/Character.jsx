@@ -6,13 +6,12 @@ export const Character = ({ character, showSelectedCharacter }) => {
 
 	return (
 		<div
-			className="relative flex justify-center overflow-hidden cursor-pointer py-[4px]"
+			className="relative flex justify-center cursor-pointer py-[4px] overflow-hidden"
 			onMouseEnter={() => setHoveredImage(true)}
 			onMouseLeave={() => setHoveredImage(false)}
 			onClick={() => showSelectedCharacter(character)}
 		>
-			{/*relative h-[350px] w-[95%] */}
-			<div className="relative h-[350px] w-[95%] overflow-hidden">
+			<div className="relative h-[350px] w-full overflow-hidden">
 				<div
 					style={{
 						backgroundImage: `url(${char_background})`,
@@ -33,12 +32,18 @@ export const Character = ({ character, showSelectedCharacter }) => {
 								? "scale(1.02) translate(5px, -5px)"
 								: "scale(1)  translate(0, 0)",
 							transition: "all 300ms ease-in",
-							// width: "250px",
-							height: "950px",
+							minWidth: 600,
+							minHeight: 800,
+							width: "auto",
+							height: "auto",
+							objectPosition: "center",
+							marginLeft: -200,
 							objectFit: "cover",
+							position: "absolute",
+							top: 0,
 						}}
 					/>
-					<div className="absolute bottom-[80px] -ml-24 h-10 w-80 bg-gradient-to-t rotate-[20deg] from-[#eeeeee] via-red-600 to-transparent"></div>
+					<div className="absolute bottom-[80px] -ml-8 h-10 w-[130%] bg-gradient-to-t rotate-[20deg] from-[#eeeeee] via-red-600 to-transparent"></div>
 				</div>
 				<div className="h-[15%] z-10 bg-[#1e1e1e] w-full absolute bottom-0 left-0"></div>
 			</div>

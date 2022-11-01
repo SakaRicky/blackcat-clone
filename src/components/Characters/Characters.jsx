@@ -99,6 +99,7 @@ export const Characters = () => {
 				</h1>
 				<div className="absolute -top-4 left-0 h-12 w-[600px] opacity-20 bg-gradient-to-r from-red-600 to-transparent"></div>
 			</div>
+			{/* grid grid-cols-6 gap-2 pt-20 */}
 			<div className="grid grid-cols-6 gap-2 pt-20">
 				{characters.map((c, i) => (
 					<motion.div
