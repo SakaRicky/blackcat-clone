@@ -9,8 +9,8 @@
 	}
 
 	.slash-clip {
-		-webkit-clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%, 0% 50%);
-		clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%, 0% 50%);
+		-webkit-clip-path: polygon(20% -15%, 100% 0, 100% 115%, 0 115%, 0 60%);
+		clip-path: polygon(20% -15%, 100% 0, 100% 115%, 0 115%, 0 60%);
 	}
 
 	.parallelogram-clip {

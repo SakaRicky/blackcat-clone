@@ -14,13 +14,13 @@ export const Calendar = () => {
 				<div className="date tag flex justify-between">
 					<div className="inline-block text-red-500 leading-8 text-[3rem] -ml-12 font-black overflow-visible">
 						9
-						<span className="inline-block h-[40px] w-[3px] ml-1 -mb-2 bg-gray-300 rotate-[30deg]"></span>
-						<div className="inline-block ml-2 text-gray-300 whitespace-nowrap  slash-clip overflow-visible">
+						<span className="inline-block h-[40px] w-[3px] ml-1 -mb-1 bg-gray-300 rotate-[30deg]"></span>
+						<div className="inline-block ml-1 text-gray-300 whitespace-nowrap  slash-clip ">
 							29
 						</div>
 					</div>
-					<div className="flex">
-						<div className="bg-gray-300 text-black w-40 flex justify-end items-center polygon-clip">
+					<div className="flex w-[60%]">
+						<div className="bg-gray-300 text-black w-full flex justify-end items-center polygon-clip">
 							<div className="leading-[16px] text-right text-[0.75rem]">
 								LATEST
 								<br />
